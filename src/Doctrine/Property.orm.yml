@@ -1,0 +1,68 @@
+App\Entity\Property:
+  type: entity
+  table: Property
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    propertyKey:
+      type: string
+      length: 255
+      fixed: false
+      nullable: false
+      column: customer_key
+      unique: true
+    createdAt:
+      type: datetime
+      gedmo:
+        timestampable:
+          on: create
+      nullable: false
+      column: created_at
+    updatedAt:
+      type: datetime
+      gedmo:
+        timestampable:
+          on: update
+      nullable: false
+      column: updated_at
+    propertyId:
+      type: string
+      length: 255
+      nullable: true
+      column: property_id
+      unique: true
+    type:
+      type: string
+      length: 255
+      nullable: true
+      column: type
+    sizeSqm:
+      type: string
+      length: 255
+      nullable: true
+      column: size_sqm
+    startPrice:
+      type: string
+      length: 255
+      nullable: true
+      column: start_price
+    city:
+      type: string
+      length: 255
+      nullable: true
+      column: city
+    street:
+      type: string
+      length: 255
+      nullable: true
+      column: street
+    floor:
+      type: string
+      length: 255
+      nullable: true
+      column: floor

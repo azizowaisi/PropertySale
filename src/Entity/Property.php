@@ -6,7 +6,6 @@ use App\Helper\AppConstant;
 
 class Property
 {
-
     private $id;
     private $propertyKey;
     private $createdAt;
@@ -20,9 +19,6 @@ class Property
     private $street;
     private $floor;
 
-    /**
-     * @param $propertyKey
-     */
     public function __construct()
     {
         $this->propertyKey = uniqid();
@@ -45,14 +41,6 @@ class Property
     public function getPropertyKey(): string
     {
         return $this->propertyKey;
-    }
-
-    /**
-     * @param string $propertyKey
-     */
-    public function setPropertyKey(string $propertyKey): void
-    {
-        $this->propertyKey = $propertyKey;
     }
 
     /**
